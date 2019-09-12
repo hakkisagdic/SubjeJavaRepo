@@ -1,4 +1,10 @@
 public class Canli {
+    public Canli(String canliAdi)
+    {
+        Dogum(canliAdi);
+        NefesAl();
+    }
+
     public void Dogum(String isim) {
         System.out.println(isim + " isimli canlı yaratıldı");
     }

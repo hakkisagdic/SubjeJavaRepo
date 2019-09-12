@@ -2,14 +2,19 @@ public class ClassExample {
     public static void main(String[] args) {
         //System.out.println("Merhaba dünya");
 
-        Canli herhangiBirCanli = new Canli(); //instance almak
-        herhangiBirCanli.Dogum("Hacker Said");
-        herhangiBirCanli.NefesAl();
-        boolean sonuc = herhangiBirCanli.Olum(true); //allah gecinden versin
+        Canli said = new Canli("said"); //instance almak
+        boolean sonuc = said.Olum(true); //allah gecinden versin
 
-        if (sonuc)
+        Canli hakki = new Canli("hakki");
+        boolean sonuc2 = hakki.Olum(false);
+
+        Canli sanem = new Canli("sanem");
+
+        System.out.println(sonuc == sonuc2);
+
+        /*if (sonuc)
             System.out.println("nesne madde alemini terk etti.");
         else
-            System.out.println("araf diye birşey duydun mu?");
+            System.out.println("araf diye birşey duydun mu?");*/
     }
 }
