@@ -25,6 +25,7 @@ public class Canli {
         }
     }
 
+    //sürekli nefes alma fonksiyonu nasıl yapılabilir?
     public void NefesAl() {
         System.out.println(Isim + " : Nefes alıyorum");
     }
