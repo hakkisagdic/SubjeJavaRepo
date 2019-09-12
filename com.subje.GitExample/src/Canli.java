@@ -1,11 +1,16 @@
 public class Canli {
-    public Canli(String canliAdi)
+    public Canli(String canliAdi, String uyruk)
     {
         Dogum(canliAdi);
+        Isim = canliAdi;
+        Uyruk = uyruk;
         NefesAl();
     }
 
-    public void Dogum(String isim) {
+    private String Isim = "isimsiz";
+    String Uyruk = "yok";
+
+    private void Dogum(String isim) {
         System.out.println(isim + " isimli canlı yaratıldı");
     }
 
@@ -21,6 +26,13 @@ public class Canli {
     }
 
     public void NefesAl() {
-        System.out.println("Nefes alıyorum");
+        System.out.println(Isim + " : Nefes alıyorum");
+    }
+
+    public static void TopluIntihar(Canli[] canlilar)
+    {
+        for (int i = 0; i < canlilar.length; i++) {
+            canlilar[i].Olum(false);
+        }
     }
 }
