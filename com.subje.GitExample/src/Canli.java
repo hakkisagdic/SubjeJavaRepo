@@ -32,7 +32,7 @@ public class Canli {
     public static void TopluIntihar(Canli[] canlilar)
     {
         for (int i = 0; i < canlilar.length; i++) {
-            canlilar[i].Olum(false);
+            canlilar[i].Olum(false); //ödev : doğal afetler eklenecek
         }
     }
 }
