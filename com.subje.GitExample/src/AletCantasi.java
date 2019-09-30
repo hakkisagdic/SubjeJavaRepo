@@ -1,6 +1,5 @@
 import java.util.ArrayList;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.commons.lang3.exception.ExceptionUtils;
 
 public class AletCantasi { //implementation
     public AletCantasi(int kapasite)
@@ -56,18 +55,35 @@ public class AletCantasi { //implementation
         return this.Kapasite;
     }
 
-    public static void CantaDegistir(ArrayList<AletCantasi> cantalar, ArrayList<String> eklenecekler) throws Exception {
-        for (int i = 0; i < cantalar.size(); i++) {     //ödev
+    public static void CantalarıDoldur(ArrayList<AletCantasi> cantalar, ArrayList<String> eklenecekler) throws Exception {
+        for (int i = 0; i < cantalar.size(); i++) {
             for (int j = 0; j < eklenecekler.size(); j++) {
                 AletCantasi canta = cantalar.get(i);
                 if (canta.getKapasite() > canta.getAgirlik())
                 {
-                    ArrayList<String> alet = new ArrayList<String>();
+                    /*ArrayList<String> alet = new ArrayList<>();
                     alet.add(eklenecekler.get(j));
-                    canta.setIcindekiler(alet);
+                    canta.setIcindekiler(alet);  //string overload*/
+
+                    String eklenecekNesne = eklenecekler.get(j);
+                    switch (eklenecekNesne)
+                    {
+                        case "pense":
+                            canta.PenseEkle();
+                            break;
+                        case "tornavida":
+                            canta.TornavidaEkle();
+                            break;
+                        case "kerpeten":
+                            canta.KerpetenEkle();
+                            break;
+                        default:
+                            throw new RuntimeException("tanımsız nesne : " + eklenecekNesne);
+                    }
                 }
                 else{
-                    i++;
+                    //i++; //hatalı
+                    continue;
                 }
             }
         }
@@ -95,6 +111,13 @@ public class AletCantasi { //implementation
     public void PenseEkle() throws Exception {
         ArrayList<String> liste = new ArrayList<>();
         liste.add("pense");
+        this.setIcindekiler(liste);
+        this.NesneEkle();
+    }
+
+    public void KerpetenEkle() throws Exception {
+        ArrayList<String> liste = new ArrayList<>();
+        liste.add("kerpeten");
         this.setIcindekiler(liste);
         this.NesneEkle();
     }
