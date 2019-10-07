@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/JavaCourse/JavaCourse.iml" filepath="$PROJECT_DIR$/JavaCourse/JavaCourse.iml" />
       <module fileurl="file://$PROJECT_DIR$/SubjeJavaRepo.iml" filepath="$PROJECT_DIR$/SubjeJavaRepo.iml" />
       <module fileurl="file://$PROJECT_DIR$/com.subje.GitExample/com.subje.GitExample.iml" filepath="$PROJECT_DIR$/com.subje.GitExample/com.subje.GitExample.iml" />
     </modules>
